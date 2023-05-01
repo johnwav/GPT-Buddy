@@ -1,3 +1,5 @@
+
+
 // Get Calmly editor spot
 const insert = (content) => {
   // Find calmly editor
@@ -32,7 +34,19 @@ const insert = (content) => {
   });
 
   return true;
+
+
 };
+
+const reply = document.querySelector(".reply")
+
+reply.innerText = "heyyy"
+
+
+
+
+
+
 
 // Setup listener
 chrome.runtime.onMessage.addListener(

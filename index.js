@@ -19,6 +19,7 @@ const changeKey = () => {
   document.getElementById("key_entered").style.display = "none";
 };
 
+
 const checkForKey = () => {
   return new Promise((resolve, reject) => {
     chrome.storage.local.get(["openai-key"], (result) => {

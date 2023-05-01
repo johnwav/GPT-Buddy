@@ -13,7 +13,6 @@ const getKey = () => {
 const sendMessage = (content) => {
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     const activeTab = tabs[0].id;
-
     chrome.tabs.sendMessage(
       activeTab,
       { message: "inject", content },
@@ -54,9 +53,9 @@ const generateCompletionAction = async (info, tab) => {
 
     const { selectionText } = info;
     const basePromptPrefix =
-      "Help me write lyrics in the style of Drake, Canadian Rapper\n";
+      "Help me write a poem in the style of shakespear\n";
     const finalPromptPrefix =
-      "Take the lyrics below and generate 5 song titles:\n";
+      "Take the lyrics below and generate 1 song titles:\n";
 
     // Base Prompt
     const baseChoice = await generate(`${basePromptPrefix}${selectionText}`);
